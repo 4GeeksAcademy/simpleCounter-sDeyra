@@ -11,8 +11,15 @@ import '../styles/index.css'
 // components
 import Home from './components/Home';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+let unidad = 0
+setInterval(() => {
+  unidad++
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+      <Home digito = {unidad} /> 
+      {/* // mando unidad a home// */}
+    </React.StrictMode>,
+  )
+}, 1000)
+
+
